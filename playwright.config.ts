@@ -20,7 +20,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 1,
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+  reporter: [["html"], ["list"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: "http://practicesoftwaretesting.com/",
@@ -43,7 +43,7 @@ export default defineConfig({
     },
     {
       name: "chromium",
-      dependencies: ["setup"],
+      // dependencies: ["setup"],
       use: { ...devices["Desktop Chrome"], permissions: ["clipboard-read"] },
     },
     {
