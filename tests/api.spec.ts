@@ -14,3 +14,20 @@ test.describe("Products API", async () => {
     expect(BODY.total).toBe(EXPECTED_COUNT_PRODUCT_ITEMS_TOTAL);
   });
 });
+
+test.describe("Login", async () => {
+  const USER = "customer2@practicesoftwaretesting.com";
+  const PASS = "welcome01";
+
+  test("POST test", async ({ request }) => {
+    const RESPONSE = await request.get(API_BASE_URL + "/users/login", {
+      data: {
+        email: USER,
+        password: PASS,
+      },
+    });
+    const BODY = await RESPONSE.json();
+    expect(RESPONSE.status()).toBe(200);
+    expect(BODY.access_token).toBeTruthy();
+  });
+});
