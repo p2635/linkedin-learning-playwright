@@ -17,9 +17,9 @@ test.describe("Products API", async () => {
   });
 });
 
-test.describe("Login", async () => {
+test.describe("Login API", async () => {
   const API_URL = API_BASE_URL + "/users/login";
-  const USER = "customer2@practicesoftwaretesting.com";
+  const USER = "customer3@practicesoftwaretesting.com";
   const PASS = "welcome01";
 
   test("POST test", async ({ request }) => {
