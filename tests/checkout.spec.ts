@@ -25,9 +25,9 @@ test.describe("Checkout tests", () => {
     await page.getByTestId("monthly_installments").selectOption("3");
     await page.getByTestId("finish").click();
 
-    await expect(
-      page.locator("div").filter({ hasText: "Payment was successful" }).nth(5),
-    ).toBeVisible();
+    await expect(page.locator(".help-block")).toHaveText(
+      "Payment was successful",
+    );
     await expect(page.getByTestId("payment-success-message")).toContainText(
       "Payment was successful",
     );
