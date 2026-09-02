@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+.tmp
+npm-debug.log
+
+# Playwright
+.auth/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
