@@ -31,5 +31,6 @@ test.describe("Checkout tests", () => {
     await expect(page.getByTestId("payment-success-message")).toContainText(
       "Payment was successful",
     );
+    await expect(page).toHaveScreenshot("checkout-happy-path.png");
   });
 });
