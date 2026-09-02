@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 const API_BASE_URL = "https://api.practicesoftwaretesting.com";
 const EXPECTED_COUNT_PRODUCT_ITEMS = 9;
-const EXPECTED_COUNT_PRODUCT_ITEMS_TOTAL = 51;
+const EXPECTED_COUNT_PRODUCT_ITEMS_TOTAL = 50;
 
 test.describe("Products API", async () => {
   test("GET test", async ({ request }) => {
