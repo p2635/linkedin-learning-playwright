@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Checkout any item as guest happy path", () => {
-  test("test", async ({ page }) => {
+test.describe("Checkout tests", () => {
+  test("Buy first item as guest happy path", async ({ page }) => {
     await page.goto("/");
 
     // Add item to cart
