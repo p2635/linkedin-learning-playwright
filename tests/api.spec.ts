@@ -23,7 +23,7 @@ test.describe("Login API", async () => {
   const PASS = "welcome01";
 
   test("POST test", async ({ request }) => {
-    const RESPONSE = await request.get(API_URL, {
+    const RESPONSE = await request.post(API_URL, {
       data: {
         email: USER,
         password: PASS,
