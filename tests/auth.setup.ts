@@ -1,8 +1,8 @@
 import { test as setup, expect } from "@playwright/test";
 
 setup("authenticate as customer 01", async ({ page, context }) => {
-  const USER = "customer@practicesoftwaretesting.com";
-  const PASS = "welcome01";
+  const USER = process.env.TEST_CUSTOMER01_EMAIL!;
+  const PASS = process.env.TEST_CUSTOMER01_PASSWORD!;
   const AUTH_FILE = ".auth/customer01.json";
 
   await page.goto("/");

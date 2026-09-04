@@ -32,6 +32,16 @@ A test automation project I built while learning Playwright. I've included tests
 
 Create an `.env` file locally based on the provided `.env.example` at project root.
 
+**Required environment variables:**
+
+- `API_BASE_URL` — Base URL for API tests (e.g., `http://api.practicesoftwaretesting.com/`)
+- `TEST_CUSTOMER01_EMAIL` — Email for primary test account
+- `TEST_CUSTOMER01_PASSWORD` — Password for primary test account
+- `TEST_CUSTOMER03_EMAIL` — Email for secondary test account (API tests)
+- `TEST_CUSTOMER03_PASSWORD` — Password for secondary test account (API tests)
+
+**Note:** Test account credentials for the [PracticeSoftwareTesting.com][practice-url] site may change periodically. If tests fail with authentication errors, check the [practice-software-testing repository][practice-repo-url] for the latest valid credentials.
+
 ```bash
 # Install dependencies
 npm install
@@ -55,6 +65,9 @@ npx playwright show-report
 ### Test Structure
 
 ```
+.env                  # URLs and test data (sensitive)
+fixtures/
+└── testData.ts       # Test data (not sensitive)
 tests/
 ├── api/              # API endpoint tests
 ├── homepage/         # Homepage UI tests
@@ -119,3 +132,4 @@ This repository was created following the [LinkedIn Learning - Learning Playwrig
 
 [lil-course-url]: https://www.linkedin.com/learning/learning-playwright/
 [practice-url]: https://practicesoftwaretesting.com/
+[practice-repo-url]: https://github.com/testsmith-io/practice-software-testing

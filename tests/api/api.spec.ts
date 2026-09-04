@@ -42,8 +42,8 @@ test.describe("Products API", async () => {
 
 test.describe("Login API", async () => {
   const API_URL = `${API_BASE_URL}/users/login`;
-  const USER = "customer3@practicesoftwaretesting.com";
-  const PASS = "welcome01";
+  const USER = process.env.TEST_CUSTOMER03_EMAIL!;
+  const PASS = process.env.TEST_CUSTOMER03_PASSWORD!;
 
   test("POST test", async ({ request }) => {
     const RESPONSE = await request.post(API_URL, {
