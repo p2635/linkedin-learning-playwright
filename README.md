@@ -28,7 +28,7 @@ A test automation project I built while learning Playwright. I've included tests
 - Node.js 18+ installed
 - npm or yarn package manager
 
-### Installation & Running Tests
+### Installation and Running Tests
 
 Create an `.env` file locally based on the provided `.env.example` at project root.
 
@@ -48,7 +48,7 @@ npm run test:chromium
 # Run tests with UI mode (interactive)
 npm run test:ui
 
-# View test results & traces
+# View test results and traces
 npx playwright show-report
 ```
 
@@ -58,14 +58,14 @@ npx playwright show-report
 tests/
 ├── api/              # API endpoint tests
 ├── homepage/         # Homepage UI tests
-├── login/            # Authentication & login tests
+├── login/            # Authentication and login tests
 ├── checkout/         # Checkout flow tests
 └── auth.setup.ts     # Shared authentication setup
 pages/
 └── loginPage.ts      # Page Object Model example
 ```
 
-## Design Decisions & Testing Patterns
+## Design Decisions and Testing Patterns
 
 - **Page Object Model**: I keep all page locators and interactions in one place so they're easy to find and update when the website changes.
 - **Reused Login Sessions**: I save the login session once instead of logging in for every test — makes tests run faster and the suite more stable.
