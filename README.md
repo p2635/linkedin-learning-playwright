@@ -50,10 +50,6 @@ npm run test:ui
 npx playwright show-report
 ```
 
-### Environment Configuration
-
-**Note on `.env` file:** The `.env` file is committed to this repository (see [.env](.env)). It only contains the public base URL for the practice website, so it's safe. However, **don't do this in real projects**. Secrets belong in `.gitignore` and should be managed through `.env.example` templates or CI/CD systems, not committed to git.
-
 ### Test Structure
 
 ```
