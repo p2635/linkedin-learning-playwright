@@ -30,6 +30,8 @@ A test automation project I built while learning Playwright. I've included tests
 
 ### Installation & Running Tests
 
+Create an `.env` file locally based on the provided `.env.example` at project root.
+
 ```bash
 # Install dependencies
 npm install
